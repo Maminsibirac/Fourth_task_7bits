@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+	<head>
+    	<meta charset="windows-1251">
+
+        <title>My test page!</title>  
+		
+        <link href="my_styles.css" rel="stylesheet">	
+               
+      <script src="jQuery.js"></script>	  	  
+	  <script>
+	  function protected(){
+
+		var field = new Array("first", "last", "email");
+				
+		
+			var error=0; 		
+			var email = $("#email").val();
+		   	if(!isValidEmailAddress(email)){
+				error=2;
+				$("#email").css('border', 'red 1px solid');
+			}			
+			$("form").find(":input").each(function() {
+				for(var i=0;i<field.length;i++){ 
+					if($(this).attr("name")==field[i]){ 
+						
+						if(!$(this).val()){
+							$(this).css('border', 'red 1px solid');
+							error=1;		
+														
+						}
+						else{
+							$(this).css('border', '2px solid #7499b4');
+						}
+						
+						
+					}						
+				}				
+		   })
+		   		  						
+			
+			if(error==0){				 
+			    var success = "Ваша заявка принята!";
+				$("#messenger").html(success);	
+				$("#messenger").fadeIn("slow");
+				postContactToGoogle();
+			}
+			else{	
+				var err_text = "";
+				if(error==2)  {
+					$("#email").css('border', 'red 1px solid');
+					err_text="Введен некорректный e-mail!";					
+				}
+				if(error==1)  err_text="Не все обязательные поля заполнены!";
+				
+				$("#messenger").html(err_text);	
+				$("#messenger").fadeIn("slow");	
+															
+				return false; 
+			}																	
+	}
+	
+	function isValidEmailAddress(emailAddress) {
+		var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+		return pattern.test(emailAddress);
+    }  
+	
+	</script>
+	       
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+		function postContactToGoogle(){
+        var first = $('#first').val();
+        var last = $('#last').val();
+        var email = $('#email').val();
+		var change = $("input[type='radio'][name='rad']:checked").val();
+		var comments = $('#comments').val();			
+		if($("#our").prop('checked') ) {
+			var our = "Да";
+		}
+		else {
+			var our = "Нет";
+		}
+		
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1lqcXijLzGfzRpn0BB7j60Asr7QP1Mkv-N_v0V-8OkfE/formResponse",
+                data: {"entry.116495454" : first, "entry.2083176069" : last, "entry.814955665": email,
+						"entry.1669428749": change, "entry.786489787": our, "entry.1836449267": comments},
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function (){
+ 
+                        $('#first').val("");
+                        $('#last').val("");
+                        $('#email').val("");
+						$('#comments').val("");											
+						$('#our').prop("checked", true);                       
+                    },
+                    200: function (){
+                        $('#first').val("");
+                        $('#last').val("");
+                        $('#email').val("");
+						$('#comments').val("");
+						$('#our').prop("checked", true);                       
+                    }
+                }
+            });
+        }
+		  
+	  </script>
+      
+      	                 	
+	</head>
+    
+	<body>
+    	
+ 		<header class="header">        	        	
+            <img src="images/logo/snow_logo.png" alt="" class="snow-logo">                                    	           			
+     		<div class="text">
+      			<p class="text-line-first">Твой экстрим,</p>
+      			<p class="text-line-second">твои правила,</p>
+      			<p class="text-line-third">твой взгляд!</p>                          
+       		</div>
+            
+            <div class="social-logo">
+            	<img src="images/logo/facebook_logo.png" alt="">
+            	<img src="images/logo/twitter_logo.png">
+            	<img src="images/logo/google_logo.png">
+            	<img src="images/logo/red_blue_logo.png"> 
+            </div>
+            <div class="toolbar"> 
+            	<p class="tool-first">Кто мы?</p>
+                <div class="tool-second">Что мы умеем?</div>
+                <div class="tool-third">Обратная связь</div>               
+            </div>                                 
+ 		</header>
+        
+        <main>
+        <div class="background">
+        	<div class="video-content">
+               <div class="content-first">
+              	   <img style="border:6px solid white;" src="images/background/snowboard.png" alt="" width="470"> 
+                   <img src="images/logo/arrow_left.png" class="arrow-left">
+               	   <img src="images/logo/arrow_right.png" class="arrow-right">
+                   <img src="images/logo/radio_button.png" class="radio-button-first" width="18">
+                   <img src="images/logo/radio_button.png" class="radio-button-second" width="18">
+                   <img src="images/logo/radio_button.png" class="radio-button-third" width="18">
+               </div>
+                                  
+               <div class="content-second">
+               	 <img style="border:2px solid white;" src="images/background/snow_blog_first.png" width = "200px" height="66" hspace="15">
+                 <img src="images/background/video_text.png" class="arena">
+                 <div class="text-video">Видео</div>
+                 <img src="images/pictures/play.png" class="play">
+                 
+                 <img style="border:2px solid white;" src="images/background/snow_blog_second.png" width="200" height="66" hspace="15" vspace="16">
+                 <img src="images/background/video_text.png" class="photo">
+                 <div class="text-photo">Фото</div>
+                 <img style="border:2px solid white;" src="images/background/snow_blog_third.png" width ="200" height="66" hspace="15">
+              	 <img src="images/background/video_text.png" class="snow">
+                 <div class="text-press">Пресса <div class="press">о нас</div></div>
+               </div>
+               
+            </div>
+            
+            <div class="article-content">
+            	Ну и что ты сидишь?! Оторвись от дивана и вставай на сноуборд!
+                <strong>Пришло твое время показать себя!</strong> А наши операторы и фотографы тебе в этом помогут :)
+            </div>
+            <div class="title">
+            	Обратная связь
+            </div>
+            <article>
+            	<div class="text">
+            		Чтобы записать незабываемое видео или снять чумовую фотосессию в снежных горах на сноуборде, заполните форму и мы свяжемся с вами в ближайшее время.
+            	</div>
+               
+            </article>
+            
+            <div class="ground">                       
+             <div class="edit-form">      
+  				 <form action="" target="_self">                 	                    				
+					<div id="messenger"></div> 
+						<div class="form-text">  
+							<div class="name">Имя<span>*</span></div> 
+			  				<p class="indent">Фамилия<span>*</span></p> 
+                        	<p class="indent"><div class="email">E-mail<span>*</span></div></p>
+                            <p><div class="comments">Комментарий</div></p>
+                        </div>
+			 			<div form-action>
+			  				<input id="first" name="first" type="text" value=""  class="text" autocomplete="off"/>	
+			  				<p><input id="last" name="last" type="text" value=""  class="text" autocomplete="off"/></p>			  	 			 			
+			 				<p><input id="email" name="email" type="text" value=""  class="text" autocomplete="off"/></p>	
+                        </div>	  			
+                        <div class="form-action-1">   
+                            <div><input id="photo" type="radio" name="rad" value="Фотосъемка" class="radio" checked="checked"/> Фотосъемка                     							
+                            <p class="first_check"><input id="video" type="radio" name="rad" value="Видеосъемка" class="radio"/> Видеосъемка</p></div>		
+			  				<div class="second_check"><input id="our" type="checkbox" name="our" value="1" checked="checked" class="radio"/> Наличие собственной экипировки</div>		 				    	<div class="textarea"><textarea rows="5" id="comments" name="comments" class="box" autocomplete="off"></textarea></div>
+                       
+						</div>
+	     		   <div class="send">
+					 <button type="button" class="submit"  onclick="protected()">Оставить заявку</button>
+				   </div>
+			    </form>
+   			</div>
+  		</div>
+            
+        </main>
+        
+        <footer>       	
+        	<img src="images/pictures/snowboard_footer.png" class="snowboard-footer">
+            <div class="text-contact">
+            	644000, Город, ул. Улицаулица, 334
+				<p>Телефон: <span class="contact-phone">(123) 34-56-78</span></p>
+            </div>
+            <div class="text-company">
+            	© 2013 SnowRIP Company
+            </div>
+        </footer>
+	</body>
+</html>
