@@ -22,7 +22,7 @@ TEXTAREA:focus {
 
 
 html {
-	background:	grey;
+    background:	grey;
     background-repeat:no-repeat;
     background-attachment:fixed;	
 }
@@ -57,7 +57,7 @@ html {
 	color: white;	
 	font-family: PT-Sans;
 	font-style: Italic;
-	font-size: 23px;
+	font-size: 20px;
 	line-height: 4px;
 }
 
@@ -224,9 +224,10 @@ main .article-content {
 	heigth: 80px;
 	background-color: #b1cecf;
 	opacity: 0.6;
-	margin: -2px 0 0 220px;
+	margin: -1px 0 0 220px;
 	padding: 10px 15px;
 	font-family: PT-Sans, Regular, sens-serif;
+	font-size: 15px;
 }
 
 main .title {
@@ -247,9 +248,10 @@ article .text {
 	width: 685px;
 	height: 485px;
 	margin-left: 220px;
-	padding-top: 15px;
+	margin-top: 7px;
+	padding-top: 18px;
 	font-family: PT-Sans, Regular, sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	color: #f6f9fb;
 	line-height: 25px;	
 }
@@ -257,7 +259,7 @@ article .text {
 
 /*Main Action*/
 .edit-form {
-	padding-top: 30px;
+	padding-top: 36px;
 	margin-left: 325px;
 	height: 465px;
  	width: 1152px;
@@ -277,7 +279,7 @@ span {
 }
 
 .edit-form .text {
-	width: 340px;
+	width: 350px;
 	border: 2px solid #7499b4;
 	background-color: black;
 	color: #7499b4; 
@@ -286,40 +288,47 @@ span {
 }
 
 .form-text {
+	font-size: 16px;
+	margin-right: 10px;
 	float: left;
 	height: 400px;	
 }
 
 .comments {
-	padding-top: 145px;
-	margin-left: -30px;
+	padding-top: 150px;
+	margin-left: -25px;
 }
 
-.indent {
-	margin-top: 25px;	
+
+.indent {	 
+	margin-top: 30px;	
 }
 
 .form-text .name {
-	padding-left: 38px;	
-	padding-top: 5px;
+	padding-left: 45px;	
+	padding-top: 2px;
 }
 
+
 .form-text .email {
-	padding-left: 20px;
+	padding-left: 25px;
 }
 
 .box {
-	width: 340px;
+	width: 350px;
 	border: 2px solid #7499b4;
 	background-color: black;
 	color: #7499b4;	
 }
 
 .form-action-1 {
+	font-size: 15px;
 	margin-top: 32px;
-	padding-left: 90px;	
+	padding-left: 120px;	
 }
-.first_check {
+
+
+.first_check {	
 	margin-top: 12px;
 }
 
@@ -333,7 +342,7 @@ span {
 
 .send {
 	margin-top: 15px;	
-	margin-left: 238px;
+	margin-left: 275px;
 }
 
 .submit {
@@ -342,15 +351,16 @@ span {
 	background: #62b7d6;
 	border: 0px solid;
 	font-family: PT-Sans. sans-serif;
-	font-size: 19px; 
+	font-size: 19px;
+	color: black;  
 }
 
 #messenger {
-	margin: -30px 0 15px 96px;
+	margin: -30px 0 15px 118px;
 	font-family:PT-Sans, Regular, sans-serif;
 	text-align:center;
 	font-size: 17px;
-	width: 342px;
+	width: 350px;
 	background: #62b7d6;
 	display:none;	
 }
@@ -370,30 +380,30 @@ footer {
 footer .snowboard-footer {
 	width: 335px;
 	height: 296px;
-	margin: -55px 0 280px 780px;
+	margin: -55px 0 280px 790px;
 	background-image: url(images/pictures/snowboard_footer.png);
 }
 
 footer .text-contact {
 	font:  PT-Sans, Regular, sans-serif;
-	font-size: 16px;
-	width: 250px;
+	font-size: 14px;
+	width: 265px;
 	height: 40px;
-	margin: -315px 0 0 650px;
+	margin: -310px 0 0 650px;
 	color: #f6f9fb;
 	line-height: 5px;
 }
 
 footer .contact-phone {
-	font-size: 16px;
+	font-size: 14px;
 	color: #8cbdcc;
 }
 
 footer .text-company {
 	font:  PT-Sans, Regular, sans-serif;
-	font-size: 15px;
+	font-size: 13px;
 	width: 190px;
 	height:20px;
 	color: #f6f9fb; 
-	margin: 35px 0 0 770px;
+	margin: 30px 0 0 770px;
 }

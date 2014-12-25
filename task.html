@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-    	<meta charset="windows-1251">
+    	<meta charset="utf-8">
 
         <title>My test page!</title>  
 		
@@ -41,7 +41,7 @@
 		   		  						
 			
 			if(error==0){				 
-			    var success = "Ваша заявка принята!";
+			    var success = "Р’Р°С€Р° Р·Р°СЏРІРєР° РїСЂРёРЅСЏС‚Р°!";
 				$("#messenger").html(success);	
 				$("#messenger").fadeIn("slow");
 				postContactToGoogle();
@@ -50,9 +50,9 @@
 				var err_text = "";
 				if(error==2)  {
 					$("#email").css('border', 'red 1px solid');
-					err_text="Введен некорректный e-mail!";					
+					err_text="Р’РІРµРґРµРЅ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ e-mail!";					
 				}
-				if(error==1)  err_text="Не все обязательные поля заполнены!";
+				if(error==1)  err_text="РќРµ РІСЃРµ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ Р·Р°РїРѕР»РЅРµРЅС‹!";
 				
 				$("#messenger").html(err_text);	
 				$("#messenger").fadeIn("slow");	
@@ -77,10 +77,10 @@
 		var change = $("input[type='radio'][name='rad']:checked").val();
 		var comments = $('#comments').val();			
 		if($("#our").prop('checked') ) {
-			var our = "Да";
+			var our = "Р”Р°";
 		}
 		else {
-			var our = "Нет";
+			var our = "РќРµС‚";
 		}
 		
             $.ajax({
@@ -119,9 +119,9 @@
  		<header class="header">        	        	
             <img src="images/logo/snow_logo.png" alt="" class="snow-logo">                                    	           			
      		<div class="text">
-      			<p class="text-line-first">Твой экстрим,</p>
-      			<p class="text-line-second">твои правила,</p>
-      			<p class="text-line-third">твой взгляд!</p>                          
+      			<p class="text-line-first">РўРІРѕР№ СЌРєСЃС‚СЂРёРј,</p>
+      			<p class="text-line-second">С‚РІРѕРё РїСЂР°РІРёР»Р°,</p>
+      			<p class="text-line-third">С‚РІРѕР№ РІР·РіР»СЏРґ!</p>                          
        		</div>
             
             <div class="social-logo">
@@ -131,9 +131,9 @@
             	<img src="images/logo/red_blue_logo.png"> 
             </div>
             <div class="toolbar"> 
-            	<p class="tool-first">Кто мы?</p>
-                <div class="tool-second">Что мы умеем?</div>
-                <div class="tool-third">Обратная связь</div>               
+            	<p class="tool-first">РљС‚Рѕ РјС‹?</p>
+                <div class="tool-second">Р§С‚Рѕ РјС‹ СѓРјРµРµРј?</div>
+                <div class="tool-third">РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ</div>               
             </div>                                 
  		</header>
         
@@ -152,29 +152,29 @@
                <div class="content-second">
                	 <img style="border:2px solid white;" src="images/background/snow_blog_first.png" width = "200px" height="66" hspace="15">
                  <img src="images/background/video_text.png" class="arena">
-                 <div class="text-video">Видео</div>
+                 <div class="text-video">Р’РёРґРµРѕ</div>
                  <img src="images/pictures/play.png" class="play">
                  
                  <img style="border:2px solid white;" src="images/background/snow_blog_second.png" width="200" height="66" hspace="15" vspace="16">
                  <img src="images/background/video_text.png" class="photo">
-                 <div class="text-photo">Фото</div>
+                 <div class="text-photo">Р¤РѕС‚Рѕ</div>
                  <img style="border:2px solid white;" src="images/background/snow_blog_third.png" width ="200" height="66" hspace="15">
               	 <img src="images/background/video_text.png" class="snow">
-                 <div class="text-press">Пресса <div class="press">о нас</div></div>
+                 <div class="text-press">РџСЂРµСЃСЃР° <div class="press">Рѕ РЅР°СЃ</div></div>
                </div>
                
             </div>
             
             <div class="article-content">
-            	Ну и что ты сидишь?! Оторвись от дивана и вставай на сноуборд!
-                <strong>Пришло твое время показать себя!</strong> А наши операторы и фотографы тебе в этом помогут :)
+            	РќСѓ Рё С‡С‚Рѕ С‚С‹ СЃРёРґРёС€СЊ?! РћС‚РѕСЂРІРёСЃСЊ РѕС‚ РґРёРІР°РЅР° Рё РІСЃС‚Р°РІР°Р№ РЅР° СЃРЅРѕСѓР±РѕСЂРґ!
+                <strong>РџСЂРёС€Р»Рѕ С‚РІРѕРµ РІСЂРµРјСЏ РїРѕРєР°Р·Р°С‚СЊ СЃРµР±СЏ!</strong> Рђ РЅР°С€Рё РѕРїРµСЂР°С‚РѕСЂС‹ Рё С„РѕС‚РѕРіСЂР°С„С‹ С‚РµР±Рµ РІ СЌС‚РѕРј РїРѕРјРѕРіСѓС‚ :)
             </div>
             <div class="title">
-            	Обратная связь
+            	РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ
             </div>
             <article>
             	<div class="text">
-            		Чтобы записать незабываемое видео или снять чумовую фотосессию в снежных горах на сноуборде, заполните форму и мы свяжемся с вами в ближайшее время.
+            		Р§С‚РѕР±С‹ Р·Р°РїРёСЃР°С‚СЊ РЅРµР·Р°Р±С‹РІР°РµРјРѕРµ РІРёРґРµРѕ РёР»Рё СЃРЅСЏС‚СЊ С‡СѓРјРѕРІСѓСЋ С„РѕС‚РѕСЃРµСЃСЃРёСЋ РІ СЃРЅРµР¶РЅС‹С… РіРѕСЂР°С… РЅР° СЃРЅРѕСѓР±РѕСЂРґРµ, Р·Р°РїРѕР»РЅРёС‚Рµ С„РѕСЂРјСѓ Рё РјС‹ СЃРІСЏР¶РµРјСЃСЏ СЃ РІР°РјРё РІ Р±Р»РёР¶Р°Р№С€РµРµ РІСЂРµРјСЏ.
             	</div>
                
             </article>
@@ -184,24 +184,23 @@
   				 <form action="" target="_self">                 	                    				
 					<div id="messenger"></div> 
 						<div class="form-text">  
-							<div class="name">Имя<span>*</span></div> 
-			  				<p class="indent">Фамилия<span>*</span></p> 
+							<div class="name">РРјСЏ<span>*</span></div> 
+			  				<p class="indent" class="surname">Р¤Р°РјРёР»РёСЏ<span>*</span></p> 
                         	<p class="indent"><div class="email">E-mail<span>*</span></div></p>
-                            <p><div class="comments">Комментарий</div></p>
+                            <p><div class="comments">РљРѕРјРјРµРЅС‚Р°СЂРёР№</div></p>
                         </div>
-			 			<div form-action>
-			  				<input id="first" name="first" type="text" value=""  class="text" autocomplete="off"/>	
-			  				<p><input id="last" name="last" type="text" value=""  class="text" autocomplete="off"/></p>			  	 			 			
-			 				<p><input id="email" name="email" type="text" value=""  class="text" autocomplete="off"/></p>	
+			 <div form-action>
+			  <input id="first" name="first" type="text" value=""  class="text" autocomplete="off"/>	
+			  <p><input id="last" name="last" type="text" value=""  class="text" autocomplete="off"/></p>			  	 			  <p><input id="email" name="email" type="text" value=""  class="text" autocomplete="off"/></p>	
                         </div>	  			
                         <div class="form-action-1">   
-                            <div><input id="photo" type="radio" name="rad" value="Фотосъемка" class="radio" checked="checked"/> Фотосъемка                     							
-                            <p class="first_check"><input id="video" type="radio" name="rad" value="Видеосъемка" class="radio"/> Видеосъемка</p></div>		
-			  				<div class="second_check"><input id="our" type="checkbox" name="our" value="1" checked="checked" class="radio"/> Наличие собственной экипировки</div>		 				    	<div class="textarea"><textarea rows="5" id="comments" name="comments" class="box" autocomplete="off"></textarea></div>
+                            <div><input id="photo" type="radio" name="rad" value="Р¤РѕС‚РѕСЃСЉРµРјРєР°" class="radio" checked="checked"/> Р¤РѕС‚РѕСЃСЉРµРјРєР°                     							
+                            <p class="first_check"><input id="video" type="radio" name="rad" value="Р’РёРґРµРѕСЃСЉРµРјРєР°" class="radio"/> Р’РёРґРµРѕСЃСЉРµРјРєР°</p></div>		
+			  				<div class="second_check"><input id="our" type="checkbox" name="our" value="1" checked="checked" class="radio"/> РќР°Р»РёС‡РёРµ СЃРѕР±СЃС‚РІРµРЅРЅРѕР№ СЌРєРёРїРёСЂРѕРІРєРё</div>		 				    	<div class="textarea"><textarea rows="5" id="comments" name="comments" class="box" autocomplete="off"></textarea></div>
                        
 						</div>
 	     		   <div class="send">
-					 <button type="button" class="submit"  onclick="protected()">Оставить заявку</button>
+					 <button type="button" class="submit"  onclick="protected()">РћСЃС‚Р°РІРёС‚СЊ Р·Р°СЏРІРєСѓ</button>
 				   </div>
 			    </form>
    			</div>
@@ -212,11 +211,11 @@
         <footer>       	
         	<img src="images/pictures/snowboard_footer.png" class="snowboard-footer">
             <div class="text-contact">
-            	644000, Город, ул. Улицаулица, 334
-				<p>Телефон: <span class="contact-phone">(123) 34-56-78</span></p>
+            	644000, Р“РѕСЂРѕРґ, СѓР». РЈР»РёС†Р°СѓР»РёС†Р°, 334
+				<p>РўРµР»РµС„РѕРЅ: <span class="contact-phone">(123) 34-56-78</span></p>
             </div>
             <div class="text-company">
-            	© 2013 SnowRIP Company
+            	В© 2013 SnowRIP Company
             </div>
         </footer>
 	</body>
